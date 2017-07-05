@@ -1,1 +1,1 @@
-[Основы разработки на C++: белый пояс](https://www.coursera.org/learn/c-plus-plus-white/home/welcome)
+[Основы разработки на C++: белый пояс](https://www.coursera.org/learn/c-plus-plus-white/home/welcome) by Moscow Institute of Physics and Technology & Yandex

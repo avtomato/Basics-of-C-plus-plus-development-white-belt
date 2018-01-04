@@ -3,8 +3,8 @@
 
 using namespace std;
 
-int main() {
 
+int main() {
     int n = 0;
     int i = 0;
     string s;
@@ -20,7 +20,6 @@ int main() {
         }
         i += 1;
     }
-
     if (n == 1) {
         cout << "-1";
     } else if (n == 0) {

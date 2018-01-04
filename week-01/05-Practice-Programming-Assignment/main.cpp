@@ -2,10 +2,11 @@
 
 using namespace std;
 
-int main() {
 
+int main() {
     double N, A, B, X, Y, p;
     cin >> N >> A >> B >> X >> Y;
+    
     if (N < A && N < B) {
         p = N;
         cout << p;
@@ -16,6 +17,6 @@ int main() {
         p = N - N * Y / 100;
         cout << p;
     }
-
+    
     return 0;
 }

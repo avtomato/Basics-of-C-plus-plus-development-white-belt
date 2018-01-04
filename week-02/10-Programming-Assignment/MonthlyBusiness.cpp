@@ -6,13 +6,10 @@ using namespace std;
 
 
 int main() {
-
     int m = 0;
     vector<int> days_in_months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-
     int q;
     cin >> q;
-
     vector<vector<string>> v(31, vector<string>());
 
     for (int i = 0; i < q; ++i) {

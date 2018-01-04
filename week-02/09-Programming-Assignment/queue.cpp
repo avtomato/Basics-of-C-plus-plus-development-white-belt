@@ -5,11 +5,11 @@
 
 using namespace std;
 
+
 int main() {
 
     int Q;
     cin >> Q;
-
     vector<int> v;
 
     int n = 0;

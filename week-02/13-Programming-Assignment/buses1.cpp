@@ -8,10 +8,8 @@ using namespace std;
 
 
 int main() {
-
     int q;
     cin >> q;
-
     map<string, vector<string>> buses;
     map<string, vector<string>> stops;
 

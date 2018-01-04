@@ -7,10 +7,8 @@ using namespace std;
 
 
 int main() {
-
     int q;
     cin >> q;
-
     map<string, set<string>> words;
 
     for (int i = 0; i < q; ++i) {

@@ -3,6 +3,7 @@
 
 using namespace std;
 
+
 bool IsPalindrom(string s) {
     string r = "";
     for (int i = s.size() - 1; i >= 0; --i) {
@@ -17,9 +18,9 @@ bool IsPalindrom(string s) {
 
 
 int main() {
-
     string s2;
     cin >> s2;
+    
     cout << IsPalindrom(s2);
 
     return 0;

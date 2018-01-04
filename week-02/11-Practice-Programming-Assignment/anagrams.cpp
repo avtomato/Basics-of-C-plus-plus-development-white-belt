@@ -14,7 +14,6 @@ map<char, int> BuildCharCounters(string& s) {
 }
 
 int main() {
-
     int q;
     cin >> q;
 

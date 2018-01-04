@@ -8,22 +8,18 @@ using namespace std;
 
 
 int main() {
-
     int q;
     cin >> q;
-
     map<int, vector<string>> buses;
     int m = 1;
 
     for (int i = 0; i < q; ++i) {
         int n;
         cin >> n;
-
         vector<string> v(n);
         for (string& s : v) {
             cin >> s;
         }
-
         int c = 0;
         int j;
         for (const auto& item : buses) {
@@ -43,4 +39,3 @@ int main() {
 
     return 0;
 }
-

@@ -4,6 +4,7 @@
 
 using namespace std;
 
+
 void PrintMap(const map<string, string>& m) {
     for (const auto& item : m) {
         cout << item.first << "/" << item.second << " ";
@@ -12,10 +13,8 @@ void PrintMap(const map<string, string>& m) {
 }
 
 int main() {
-
     int q;
     cin >> q;
-
     map<string, string> countries;
 
     for (int i = 0; i < q; ++i) {

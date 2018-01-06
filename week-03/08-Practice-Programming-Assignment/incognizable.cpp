@@ -8,7 +8,6 @@ struct Incognizable {
     int second = 0;
 };
 
-
 int main() {
     Incognizable a;
     Incognizable b = {};

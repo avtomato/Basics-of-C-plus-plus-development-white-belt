@@ -16,10 +16,10 @@ bool Compare(int i, int j) {
 }
 
 int main() {
-
     int n;
     cin >> n;
     vector<int> v(n);
+    
     for (int& s : v) {
         cin >> s;
     }

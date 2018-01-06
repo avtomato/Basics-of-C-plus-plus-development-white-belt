@@ -17,13 +17,15 @@ public:
 
     void Reverse() {
         vector<char> v;
+        
         for (int i = 0; i < word.size(); ++i) {
             v.push_back(word[i]);
         }
-
+        
         reverse(begin(v), end(v));
-
+        
         word = "";
+            
         for (auto i : v) {
             word += i;
         }

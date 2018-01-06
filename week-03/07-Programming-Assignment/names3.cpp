@@ -41,6 +41,7 @@ string GetHistory(int year, const map<int, string>& names) {
     }
 
     string history = "";
+    
     for (int i = 1; i < names_history.size(); ++i) {
         if (history.size() == 0) {
             history += names_history[i];

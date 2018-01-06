@@ -33,7 +33,6 @@ public:
         }
         return full_name;
     }
-
 private:
     // приватные поля
     string GetFirstName(int year, map<int, string>& firstname) {

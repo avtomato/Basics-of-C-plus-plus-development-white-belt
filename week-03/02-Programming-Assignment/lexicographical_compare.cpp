@@ -25,10 +25,10 @@ bool Compare(string i, string j) {
 }
 
 int main() {
-
     int n;
     cin >> n;
     vector<string> v(n);
+    
     for (string& w : v) {
         cin >> w;
     }
@@ -38,6 +38,3 @@ int main() {
 
     return 0;
 }
-
-
-

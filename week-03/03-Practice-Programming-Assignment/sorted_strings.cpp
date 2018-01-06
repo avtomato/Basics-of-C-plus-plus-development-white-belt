@@ -22,8 +22,6 @@ private:
     vector<string> v;
 };
 
-
-
 void PrintSortedStrings(SortedStrings& strings) {
     for (const string& s : strings.GetSortedStrings()) {
         cout << s << " ";
@@ -44,4 +42,3 @@ int main() {
 
     return 0;
 }
-

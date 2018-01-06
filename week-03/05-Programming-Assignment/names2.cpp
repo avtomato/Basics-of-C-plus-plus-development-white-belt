@@ -27,7 +27,7 @@ string FindNameByYear(int year, const map<int, string>& names) {
 string GetHistory(int year, const map<int, string>& names) {
     vector<string> names_history;
     string current_name = "";
-
+    
     for (const auto& item : names) {
         if (item.first <= year) {
             if (item.second != current_name) {
@@ -39,8 +39,9 @@ string GetHistory(int year, const map<int, string>& names) {
             break;
         }
     }
-
+    
     string history = "";
+    
     for (int i = 1; i < names_history.size(); ++i) {
         if (history.size() == 0) {
             history += names_history[i];
@@ -48,7 +49,7 @@ string GetHistory(int year, const map<int, string>& names) {
             history = history + ", " + names_history[i];
         }
     }
-
+    
     return history;
 }
 
@@ -110,7 +111,7 @@ public:
         } else if (history_first_name.size() == 0 && history_last_name.size() == 0) {
             full_name = first_name + " " + last_name;
             return full_name;
-        }else if (history_first_name.size() == 0) {
+        } else if (history_first_name.size() == 0) {
             full_name = first_name + " " + last_name + " (" + history_last_name + ")" ;
             return full_name;
         } else if (history_last_name.size() == 0) {

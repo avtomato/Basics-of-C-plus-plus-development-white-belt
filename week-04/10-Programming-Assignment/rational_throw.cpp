@@ -1,7 +1,9 @@
 #include <iostream>
 #include <exception>
 #include <stdexcept>
+
 using namespace std;
+
 
 class Rational {
     // Вставьте сюда реализацию класса Rational
@@ -13,11 +15,9 @@ public:
     }
 
     Rational(int numerator, int denominator) {
-
     	if (denominator == 0) {
     		throw invalid_argument("zero denominator");
     	}
-
         // Реализуйте конструктор
         int a = numerator, b = denominator, c = 0;
         while (b != 0) {
@@ -25,15 +25,12 @@ public:
             a = b;
             b = c;
         }
-
         if (denominator / a < 0) {
             denominator = -denominator;
             numerator = -numerator;
         }
-
         p = numerator / a;
         q = denominator / a;
-
     }
 
     int Numerator() const {
@@ -54,11 +51,9 @@ private:
 
 // Вставьте сюда реализацию operator / для класса Rational
 Rational operator / (const Rational& lhs, const Rational& rhs) {
-
     if (rhs.Numerator() == 0) {
         throw domain_error("division by zero");
     }
-
     return Rational(lhs.Numerator() * rhs.Denominator(), lhs.Denominator() * rhs.Numerator());
 }
 

@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 
 class Rational {
 public:
@@ -17,12 +19,10 @@ public:
             a = b;
             b = c;
         }
-        
         if (denominator / a < 0) {
         	denominator = -denominator;
         	numerator = -numerator;
         }
-        
         p = numerator / a;
         q = denominator / a;
     }

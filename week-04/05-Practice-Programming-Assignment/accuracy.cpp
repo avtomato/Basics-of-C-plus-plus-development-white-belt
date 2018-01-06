@@ -5,8 +5,8 @@
 
 using namespace std;
 
-int main() {
 
+int main() {
     ifstream input("input.txt");
 
     double num;
@@ -19,5 +19,6 @@ int main() {
             }
         }
     }
+    
     return 0;
 }

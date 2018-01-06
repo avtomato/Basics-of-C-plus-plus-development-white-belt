@@ -6,7 +6,6 @@ using namespace std;
 
 
 int main() {
-
     ifstream input("input.txt");
 
     string line;

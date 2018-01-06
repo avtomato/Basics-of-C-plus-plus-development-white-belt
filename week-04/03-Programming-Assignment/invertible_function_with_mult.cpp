@@ -76,7 +76,6 @@ private:
     vector<FunctionsPart> parts;
 };
 
-
 Function MakeWeightFunction(const Params& params,
                             const Image& image) {
     Function function;

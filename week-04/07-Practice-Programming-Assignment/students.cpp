@@ -6,7 +6,6 @@ using namespace std;
 
 
 struct Student {
-
     Student(string other_firstname, string other_lastname, int other_day, int other_month, int other_year) {
         firstname = other_firstname;
         lastname = other_lastname;
@@ -14,7 +13,6 @@ struct Student {
         month = other_month;
         year = other_year;
     }
-
     string firstname = "";
     string lastname = "";
     int day = 0;
@@ -23,7 +21,6 @@ struct Student {
 };
 
 int main() {
-
     string firstname, lastname;
     int day, month, year;
     vector<Student> v;

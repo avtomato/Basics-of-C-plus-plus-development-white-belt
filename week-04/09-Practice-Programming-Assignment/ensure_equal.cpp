@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 void EnsureEqual(const string& left, const string& right) {
     if (left != right) {
         throw runtime_error(left + " != " + right);
@@ -11,9 +12,9 @@ void EnsureEqual(const string& left, const string& right) {
 };
 
 int main() {
-
     string first = "1";
     string second = "2";
+
     try {
         EnsureEqual(first, second);
     } catch (const exception& ex) {

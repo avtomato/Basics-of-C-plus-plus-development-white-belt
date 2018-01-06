@@ -3,7 +3,10 @@
 #include <vector>
 #include <map>
 #include <set>
+
 using namespace std;
+
+
 
 class Rational {
 public:
@@ -21,12 +24,10 @@ public:
             a = b;
             b = c;
         }
-
         if (denominator / a < 0) {
             denominator = -denominator;
             numerator = -numerator;
         }
-
         p = numerator / a;
         q = denominator / a;
     }
@@ -54,11 +55,9 @@ bool operator == (const Rational& lhs, const Rational& rhs) {
         a = b;
         b = c;
     }
-
     int n = (lhs.Denominator() * rhs.Denominator()) / a;
     int l = n / lhs.Denominator();
     int r = n / rhs.Denominator();
-
     return (lhs.Numerator() * l) == (rhs.Numerator() *r);
 }
 
@@ -69,11 +68,9 @@ bool operator < (const Rational& lhs, const Rational& rhs) {
         a = b;
         b = c;
     }
-
     int n = (lhs.Denominator() * rhs.Denominator()) / a;
     int l = n / lhs.Denominator();
     int r = n / rhs.Denominator();
-
     return (lhs.Numerator() * l) < (rhs.Numerator() *r);
 }
 
@@ -84,11 +81,9 @@ Rational operator + (const Rational& lhs, const Rational& rhs) {
         a = b;
         b = c;
     }
-
     int n = (lhs.Denominator() * rhs.Denominator()) / a;
     int l = n / lhs.Denominator();
     int r = n / rhs.Denominator();
-
     return Rational((lhs.Numerator() * l) + (rhs.Numerator() *r), n);
 }
 
@@ -99,43 +94,33 @@ Rational operator - (const Rational& lhs, const Rational& rhs) {
         a = b;
         b = c;
     }
-
     int n = (lhs.Denominator() * rhs.Denominator()) / a;
     int l = n / lhs.Denominator();
     int r = n / rhs.Denominator();
-
     return Rational((lhs.Numerator() * l) - (rhs.Numerator() *r), n);
 }
 
 Rational operator * (const Rational& lhs, const Rational& rhs) {
-
     return Rational(lhs.Numerator() * rhs.Numerator(), lhs.Denominator() * rhs.Denominator());
 }
 
 Rational operator / (const Rational& lhs, const Rational& rhs) {
-
     return Rational(lhs.Numerator() * rhs.Denominator(), lhs.Denominator() * rhs.Numerator());
 }
 
 ostream& operator << (ostream& out, const Rational& rational) {
-
     out << rational.Numerator() << '/'  << rational.Denominator();
-
     return out;
 }
 
-istream& operator>>(istream& in, Rational& rational) {
-
+istream& operator >> (istream& in, Rational& rational) {
     int p;
     in >> p;
     in.ignore(1);
     int q;
     in >> q;
-
     rational = Rational(p, q);
-
     return in;
-
 }
 
 int main() {

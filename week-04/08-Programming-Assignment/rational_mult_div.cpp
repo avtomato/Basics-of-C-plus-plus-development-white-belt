@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 
 class Rational {
 public:
@@ -44,11 +46,9 @@ bool operator == (const Rational& lhs, const Rational& rhs) {
         a = b;
         b = c;
     }
-
     int n = (lhs.Denominator() * rhs.Denominator()) / a;
     int l = n / lhs.Denominator();
     int r = n / rhs.Denominator();
-
     return (lhs.Numerator() * l) == (rhs.Numerator() *r);
 }
 
@@ -59,11 +59,9 @@ Rational operator + (const Rational& lhs, const Rational& rhs) {
         a = b;
         b = c;
     }
-
     int n = (lhs.Denominator() * rhs.Denominator()) / a;
     int l = n / lhs.Denominator();
     int r = n / rhs.Denominator();
-
     return Rational((lhs.Numerator() * l) + (rhs.Numerator() *r), n);
 }
 
@@ -74,21 +72,17 @@ Rational operator - (const Rational& lhs, const Rational& rhs) {
         a = b;
         b = c;
     }
-
     int n = (lhs.Denominator() * rhs.Denominator()) / a;
     int l = n / lhs.Denominator();
     int r = n / rhs.Denominator();
-
     return Rational((lhs.Numerator() * l) - (rhs.Numerator() *r), n);
 }
 
 Rational operator * (const Rational& lhs, const Rational& rhs) {
-
     return Rational(lhs.Numerator() * rhs.Numerator(), lhs.Denominator() * rhs.Denominator());
 }
 
 Rational operator / (const Rational& lhs, const Rational& rhs) {
-
     return Rational(lhs.Numerator() * rhs.Denominator(), lhs.Denominator() * rhs.Numerator());
 }
 

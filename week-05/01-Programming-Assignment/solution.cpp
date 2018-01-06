@@ -20,29 +20,29 @@ public:
     }
 
     Date (int new_year, int new_month, int new_day) {
-
+        
         year = new_year;
-
         if (new_month  < 1 || new_month > 12) {
             string error = "Month value is invalid: " + to_string(new_month);
             throw invalid_argument(error);
         }
+        
         month = new_month;
-
         if (new_day  < 1 || new_day > 31) {
             string error = "Day value is invalid: " + to_string(new_day);
             throw invalid_argument(error);
         }
         day = new_day;
-
     }
 
     int GetYear() const {
         return year;
     }
+    
     int GetMonth() const {
         return month;
     }
+    
     int GetDay() const {
         return day;
     }
@@ -65,7 +65,6 @@ bool operator < (const Date& lhs, const Date& rhs) {
 
 class Database {
 public:
-
     void AddEvent(const Date& date, const string& event) {
         if (db.count(date) > 0) {
             db[date].insert(event);
@@ -126,9 +125,7 @@ private:
 };
 
 ostream& operator << (ostream& out, const Date& date) {
-
     out << date.GetYear() << '-'  << date.GetMonth() << '-' << date.GetDay();
-
     return out;
 }
 
@@ -140,12 +137,11 @@ void EnsureNextSymbolEndSkip(istream &stream) {
 }
 
 istream& operator >> (istream& in, Date& date) {
-
     string input;
     in >> input;
     stringstream stream(input);
-
     int y; int m; int d;
+
     try {
         stream >> y;
         EnsureNextSymbolEndSkip(stream);
@@ -158,9 +154,8 @@ istream& operator >> (istream& in, Date& date) {
     } catch (runtime_error& re) {
         throw runtime_error("Wrong date format: " + input);
     }
-
     date = Date(y, m, d);
-
+    
     return in;
 }
 
@@ -188,7 +183,6 @@ int main() {
                 string event;
                 stream >> event;
                 db.AddEvent(date, event);
-
             } else if (operation == "Del") {
                 stream.ignore(1);
                 Date date;
@@ -212,7 +206,6 @@ int main() {
                     n = db.DeleteDate(date);
                     cout << "Deleted " << n << " events" << endl;
                 }
-
             } else if (operation == "Find") {
                 stream.ignore(1);
                 Date date;
@@ -223,7 +216,6 @@ int main() {
                     break;
                 }
                 db.Find(date);
-
             } else if (operation == "Print") {
                 db.Print();
                 break;

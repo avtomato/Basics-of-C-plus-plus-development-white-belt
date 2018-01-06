@@ -24,7 +24,7 @@ public:
         operation = new_operation;
         value = new_value;
     }
-
+    
     double Apply(double source_value) const {
         if (operation == '+') {
             return source_value + value;
@@ -67,7 +67,6 @@ public:
 private:
     vector<FunctionsPart> parts;
 };
-
 
 Function MakeWeightFunction(const Params& params,
                             const Image& image) {

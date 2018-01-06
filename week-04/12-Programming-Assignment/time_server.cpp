@@ -1,7 +1,9 @@
 #include <iostream>
 #include <exception>
 #include <string>
+
 using namespace std;
+
 
 string AskTimeServer() {
     /* Для тестирования повставляйте сюда код, реализующий различное поведение этой функии:

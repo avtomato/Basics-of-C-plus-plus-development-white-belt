@@ -4,18 +4,16 @@
 
 using namespace std;
 
-int main() {
 
+int main() {
     ifstream input("input.txt");
 
     int row = 0;
     int column = 0;
-
     if (input.is_open()) {
         input >> row;
         input.ignore(1);
         input >> column;
-
         for (int i=0; i < row; ++i) {
             for (int j=0; j <= (column*2-1); ++j) {
                 int n;

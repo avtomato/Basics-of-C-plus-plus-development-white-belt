@@ -9,10 +9,8 @@ using namespace std;
 
 
 // Реализуйте функции и методы классов и при необходимости добавьте свои
-
 class Date {
 public:
-
     Date () {
         year = 0001;
         month = 01;
@@ -20,13 +18,11 @@ public:
     }
 
     Date (int new_year, int new_month, int new_day) {
-        
         year = new_year;
         if (new_month  < 1 || new_month > 12) {
             string error = "Month value is invalid: " + to_string(new_month);
             throw invalid_argument(error);
         }
-        
         month = new_month;
         if (new_day  < 1 || new_day > 31) {
             string error = "Day value is invalid: " + to_string(new_day);
@@ -38,11 +34,11 @@ public:
     int GetYear() const {
         return year;
     }
-    
+
     int GetMonth() const {
         return month;
     }
-    
+
     int GetDay() const {
         return day;
     }
@@ -155,7 +151,7 @@ istream& operator >> (istream& in, Date& date) {
         throw runtime_error("Wrong date format: " + input);
     }
     date = Date(y, m, d);
-    
+
     return in;
 }
 

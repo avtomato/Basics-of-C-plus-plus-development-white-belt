@@ -15,9 +15,8 @@ private:
 };
 ```
 
-**Пример**
-
-Код
+##### Пример #####
+###### Код ######
 ```objectivec
 void PrintSortedStrings(SortedStrings& strings) {
   for (const string& s : strings.GetSortedStrings()) {
@@ -41,12 +40,11 @@ int main() {
 }
 ```
 
-Вывод
+###### Вывод ######
 ```objectivec
 first second third
 first second second third
 ```
 
-**Пояснение**
-
+##### Пояснение #####
 В этой задаче вам надо прислать файл с реализацией класса *SortedStrings*. **Этот файл не должен содержать функцию main**. Если в нём будет функция *main*, вы получите ошибку компиляции.

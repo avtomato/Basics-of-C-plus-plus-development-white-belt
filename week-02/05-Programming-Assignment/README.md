@@ -5,14 +5,12 @@
 *Чтобы очистить содержимое вектора, надо вызвать у него метод clear*:
 
 ```objectivec
-int a = 4;
-int b = 2;
-UpdateIfGreater(a, b);
-// b должно стать равно 4
+vector<string> words = {"hey", "hi"};
+words.clear();
+// Теперь вектор words пуст
 ```
 
-**Пример**
-
+##### Пример #####
 ```objectivec
 vector<string> source = {"a", "b", "c"};
 vector<string> destination = {"z"};
@@ -21,6 +19,5 @@ MoveStrings(source, destination);
 // destination должен содержать строки "z", "a", "b", "c" именно в таком порядке
 ```
 
-Пояснение
-
+##### Пояснение #####
 В этой задаче на проверку вам надо прислать файл с реализацией функции *MoveStrings*. **Этот файл не должен содержать функцию main**. Если в нём будет функция *main*, вы получите ошибку компиляции.

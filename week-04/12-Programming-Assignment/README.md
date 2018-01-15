@@ -23,10 +23,11 @@ private:
 * если *AskTimeServer* выбросила исключение *system_error*, метод *GetCurrentTime* должен его поймать и вернуть текущее значение поля *LastFetchedTime*. Таким образом мы скрываем от пользователя сетевые проблемы, возвращая значение, которое было получено при последнем успешном обращении к серверу;
 * если *AskTimeServer* выбросила другое исключение, метод *GetCurrentTime* должен пробросить его дальше, потому что в рамках класса *TimeServer* мы не знаем, как обрабатывать проблемы, не связанные со сбоями сети.
 
-**Как выполнять задание**
-
+##### Как выполнять задание #####
 Вам дан файл, содержащий заготовку класса *TimeServer*. В нём вам надо реализовать метод *GetCurrentTime* так, как описано выше. Файл содержит пустую функцию *AskTimeServer*. Для тестирования своей реализации вы можете пробовать добавлять разные команды в её тело:
 
 * возврат строки;
 * выброс исключения *system_error* (класс *system_error* принимает в конструкторе параметр типа *error_code*, поэтому самый простой способ выбросить это исключение — *throw system_error(error_code());*, подробнее см. [http://www.cplusplus.com/reference/system_error/system_error](http://www.cplusplus.com/reference/system_error/system_error/));
 * выброс других исключений.
+
+[time_server.cpp](https://github.com/avtomato/Basics-of-C-plus-plus-development-white-belt/blob/master/week-04/12-Programming-Assignment/Source/time_server.cpp)

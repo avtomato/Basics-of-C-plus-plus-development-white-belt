@@ -1,7 +1,6 @@
 #### Задание по программированию: Класс Rational ####
 
-**Общее описание**
-
+##### Общее описание #####
 В этой задаче вам надо разработать класс для представления рациональных чисел и внедрить его в систему типов языка С++ так, чтобы им можно было пользоваться естественным образом. Задание состоит из нескольких частей. К каждой части приложен файл с заготовкой программы, который имеет следующую структуру
 ```objectivec
 #include <iostream>
@@ -21,8 +20,7 @@ int main() {
 
 На проверку можно отправлять весь файл с вашей реализацией: функцию *main* удалять из него не нужно.
 
-**Часть 1**
-
+##### Часть 1 #####
 В первой части вам надо реализовать класс *Rational*, который представляет собой рациональное число вида *p/q*, где *p* целое, а *q* натуральное. Он должен иметь следующий интерфейс:
 ```objectivec
 class Rational {
@@ -59,8 +57,11 @@ r.numerator = 6; // Нарушен инвариант несократимост
 
 **Гарантируется, что ни в одном из тестов, на которых будет тестироваться ваша реализация, не будет знаменателя, равного нулю.**
 
-**Часть 2**
+Шаблон программы:
 
+[rational_interface.cpp](https://github.com/avtomato/Basics-of-C-plus-plus-development-white-belt/blob/master/week-04/08-Programming-Assignment/Source/rational_interface.cpp)
+
+##### Часть 2 #####
 Реализуйте для класса *Rational* операторы ==, + и - так, чтобы операции с дробями можно было записывать естественным образом. Например, следующий код должен быть валидным:
 ```objectivec
 const Rational r = Rational(1, 2) + Rational(1, 3) - Rational(1, 4);
@@ -68,9 +69,11 @@ if (r == Rational(7, 12)) {
   cout << "equal";
 }
 ```
+Шаблон программы:
 
-**Часть 3**
+[rational_eq_add_sub.cpp](https://github.com/avtomato/Basics-of-C-plus-plus-development-white-belt/blob/master/week-04/08-Programming-Assignment/Source/rational_eq_add_sub.cpp)
 
+##### Часть 3 #####
 Аналогично предыдущей части, реализуйте операторы * и /. Например, следующий код должен быть валидным:
 ```objectivec
 const Rational r = Rational(1, 2) * Rational(1, 3) / Rational(1, 4);
@@ -80,17 +83,22 @@ if (r == Rational(2, 3)) {
 ```
 **Гарантируется, что ни в одном из тестов, на которых будет тестироваться ваша реализация, не будет выполняться деление на ноль.**
 
-**Часть 4**
+Шаблон программы:
 
+[rational_mult_div.cpp](https://github.com/avtomato/Basics-of-C-plus-plus-development-white-belt/blob/master/week-04/08-Programming-Assignment/Source/rational_mult_div.cpp)
+
+##### Часть 4 #####
 В этой части вам нужно реализовать операторы ввода и вывода для класса *Rational*. В результате у вас должен работать, например, такой код
 ```objectivec
 Rational r;
 cin >> r;
 cout << r;
 ```
+Шаблон программы:
 
-**Часть 5**
+[rational_io.cpp](https://github.com/avtomato/Basics-of-C-plus-plus-development-white-belt/blob/master/week-04/08-Programming-Assignment/Source/rational_io.cpp)
 
+##### Часть 5 #####
 Наконец, вам нужно реализовать возможность использовать объекты класса *Rational* в качестве элементов контейнера *set* и ключей в контейнере *map*. Пример:
 ```objectivec
 set<Rational> rationals;
@@ -100,3 +108,6 @@ rationals.insert(Rational(1, 3));
 map<Rational, string> name;
 name[Rational(1, 2)] = "одна вторая";
 ```
+Шаблон программы:
+
+[rational_map.cpp](https://github.com/avtomato/Basics-of-C-plus-plus-development-white-belt/blob/master/week-04/08-Programming-Assignment/Source/rational_map.cpp)

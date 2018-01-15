@@ -26,9 +26,8 @@ private:
 
 Для лучшего понимания формата см. примеры.
 
-**Пример 1**
-
-Код
+##### Пример 1 #####
+###### Код ######
 ```objectivec
 int main() {
   Person person;
@@ -44,14 +43,13 @@ int main() {
 }
 ```
 
-Вывод
+###### Вывод ######
 ```objectivec
 Evgeny (Eugene) Sokolov
 ```
 
-**Пример 2**
-
-Код
+##### Пример 2 #####
+###### Код ######
 ```objectivec
 int main() {
   Person person;
@@ -91,7 +89,7 @@ int main() {
 }
 ```
 
-Вывод
+###### Вывод ######
 ```objectivec
 Incognito
 Polina with unknown last name
@@ -107,6 +105,5 @@ Pauline (Polina) Sergeeva
 Pauline (Polina) Sergeeva (Ivanova, Sergeeva)
 ```
 
-**Пояснение**
-
+##### Пояснение #####
 В этой задаче вам надо прислать файл с реализацией класса *Person*. **Этот файл не должен содержать функцию main**. Если в нём будет функция *main*, вы получите ошибку компиляции.

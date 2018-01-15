@@ -8,9 +8,8 @@ set<string> BuildMapValuesSet(const map<int, string>& m) {
 }
 ```
 
-**Пример**
-
-Код
+##### Пример #####
+###### Код ######
 ```objectivec
 set<string> values = BuildMapValuesSet({
     {1, "odd"},
@@ -25,7 +24,7 @@ for (const string& value : values) {
 }
 ```
 
-Вывод
+###### Вывод ######
 ```objectivec
 even
 odd

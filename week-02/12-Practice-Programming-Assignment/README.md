@@ -9,12 +9,10 @@
 * **ABOUT *country*** — вывод столицы страны ***country***.
 * **DUMP** — вывод столиц всех стран.
 
-**Формат ввода**
-
+##### Формат ввода #####
 В первой строке содержится количество запросов *Q*, в следующих *Q* строках — описания запросов. Все названия стран и столиц состоят лишь из латинских букв, цифр и символов подчёркивания.
 
-**Формат вывода**
-
+##### Формат вывода #####
 Выведите результат обработки каждого запроса:
 
 В ответ на запрос **CHANGE_CAPITAL *country* *new_capital*** выведите
@@ -38,9 +36,8 @@
 * **There are no countries in the world**, если пока не было добавлено ни одной страны;
 * разделённые пробелами пары ***country/capital***, описывающие столицы всех стран и упорядоченные по названию страны, если в мире уже есть хотя бы одна страна.
 
-**Пример 1**
-
-Ввод
+##### Пример 1 #####
+###### Ввод ######
 ```objectivec
 6
 CHANGE_CAPITAL RussianEmpire Petrograd
@@ -51,7 +48,7 @@ CHANGE_CAPITAL USSR Moscow
 DUMP
 ```
 
-Вывод
+###### Вывод ######
 ```objectivec
 Introduce new country RussianEmpire with capital Petrograd
 Country RussianEmpire with capital Petrograd has been renamed to RussianRepublic
@@ -60,9 +57,8 @@ Country RussianRepublic with capital Petrograd has been renamed to USSR
 Country USSR has changed its capital from Petrograd to Moscow
 USSR/Moscow
 ```
-**Пример 2**
-
-Ввод
+##### Пример 2 #####
+###### Ввод ######
 ```objectivec
 RENAME FakeCountry FarFarAway
 ABOUT FarFarAway
@@ -90,7 +86,7 @@ DUMP
 RENAME USSR USSR
 ```
 
-Вывод
+###### Вывод ######
 ```objectivec
 Incorrect rename, skip
 Country FarFarAway doesn't exist
@@ -117,4 +113,3 @@ Country RussianEmpire doesn't exist
 FederativeRepublicOfBrazil/Brasilia USSR/Moscow
 Incorrect rename, skip
 ```
-
